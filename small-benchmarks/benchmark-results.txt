@@ -1,0 +1,424 @@
+#
+# ... this file contains some results obtained with the pwscf_bench.sh
+# ... on different platforms around the world (most of them contributed 
+# ... by Axel Kohlmeyer). Total energies have been removed because in all 
+# ... these tests they fully agree with the reference.
+#
+
+#
+# ... IMPORTANT NOTE: pwscf_bench.sh monitors the cpu time (not the wall time)
+# ...                 so that, when thread libraries are used, the results can
+# ...                 be wrong because these libraries use the system time.
+#
+
+#
+# ... REFERENCE SYSTEM is a dual opteron (246, 4GB 400MHz kingston memory 
+# ... Suse 2.4.21 smp x84_64) installed at ICTP. 
+# ... The code was compiled with pgi-5.1-5 compilers (default optimization 
+# ... flags), fftw-2.1.5 and atlas libraries.
+# ... The parallel environment was LAM-MPI 7.0.2 (rpi module usysv) 
+#
+
+#
+# ... here are the results :
+#
+
+#
+#
+# ... x86-class systems, 32 bit
+#
+#
+
+This is a single node of a pentium IV cluster (MIT, results contributed by
+Matteo Cococcioni).
+Each node is of composed by four pentium IV (3.2 GHz, 2Gb Ram DDR3200) 
+interconnected with a gigabit ethernet. The code is compiled with the intel
+compiler and libraries (ifc 7.1 and mkl 7.0). LAM-MPI.
+
+1) with one CPU
+
+ test   nbndx   npwx    cpu-time
+
+    1     123  12869     458.60s
+    2    1152   2169    1140.04s
+    3    1140  11880    4507.07s
+    4     486   7557    8318.20s
+
+ score = 57.22
+
+
+2) with two CPUs
+
+ test   nbndx   npwx    cpu-time
+
+    1     123   6435     252.19s
+    2    1152   1085     687.19s
+    3    1140   5940    2348.27s
+    4     486   3825    4570.12s
+
+ score = 103.25
+
+3) with three CPUs
+
+ test   nbndx   npwx    cpu-time
+
+    1     123   4291     162.39s
+    2    1152    723     474.21s
+    3    1140   3959    1578.48s
+    4     486   2517    3095.92s
+
+ score = 153.65
+
+4) with four CPUs
+
+ test   nbndx   npwx    cpu-time
+
+    1     123   3219     125.69s
+    2    1152    543     385.76s
+    3    1140   2969    1208.27s
+    4     486   1919    2397.90s
+
+ score = 196.84
+
+ overall speed-up:
+ 
+ CPUs   test1  test2  test3  test4
+ 
+  1      1.00   1.00   1.00   1.00
+  2      1.82   1.66   1.91   1.82
+  3      2.82   2.40   2.85   2.69
+  4      3.65   2.95   3.73   3.47
+
+-----
+
+this is an athlon (thunderbird) 1.3GHz with 1.5GB PC133 SDRAM:
+
+ test   nbndx   npwx    cpu-time
+
+    1     123  12869    1418.28s
+    2    1152   2169    4627.67s
+    3    1140  11880   19225.16s
+    4     486   7557   26929.07s
+
+ score = 15.71 
+
+-----
+
+This is an athlon xp1800 desktop machine underclocked to 1.1GHz (for
+stability, from 1.53GHz) with 1.GB pc200 memory:
+
+ test   nbndx   npwx    cpu-time
+
+    1     123  12869    1124.64s
+    2    1152   2169    3769.73s
+    3    1140  11880   15270.65s
+    4     486   7557   25727.50s
+
+ score = 18.69
+
+-----
+
+This is a dual athlon mp1800 machine with 1.5GB pc266 registered ECC memory:
+
+serial run only.
+
+ test   nbndx   npwx    cpu-time
+
+    1     123  12869     933.63s
+    2    1152   2169    3176.76s
+    3    1140  11880   12851.40s
+    4     486   7557   20382.99s
+
+ score = 22.63
+ 
+-----
+
+this is a dual athlon mp1800+ (1.53GHz) machine with 1.5GB PC266 
+registered ECC memory running redhat 7.1 with a 2.4.20 kernel.
+it might be interesting to note, that the intel 8.1 compiler and
+the 2.4.9 and older kernels do not work with multi-threaded binaries.
+
+i've run the benchmark using time, to asses the impact on the walltime.
+the machine was empty during the benchmarks although not freshly rebooted.
+
+1) running parallel with LAM-MPI:
+
+ test   nbndx   npwx    cpu-time
+
+    1     123   6435     867.03s
+    2    1152   1085    2521.77s
+    3    1140   5940    9844.53s
+    4     486   3825   15275.20s
+
+ score = 28.21
+
+ time: 0.16s user 0.24s system 0% cpu 8:09:48.16 total
+
+------
+
+2) using a serial executable but linking with a threaded atlas library
+
+ test   nbndx   npwx    cpu-time
+
+    1     123  12869     873.63s
+    2    1152   2169    2568.70s
+    3    1140  11880   10194.94s
+    4     486   7557   11879.57s
+
+ score = 30.11
+
+ time: 38908.76s user 648.66s system 117% cpu 9:20:58.05 total
+
+3) a plain serial executable.
+
+ test   nbndx   npwx    cpu-time
+
+    1     123  12869     934.70s
+    2    1152   2169    3197.41s
+    3    1140  11880   12683.18s
+    4     486   7557   20318.99s
+
+ score = 22.68
+
+ time: 37782.43s user 352.13s system 99% cpu 10:35:38.78 total
+
+#
+#
+# ... x86-class systems, 64 bit
+#
+#
+
+this is the SISSA opteron-246 cluster (LAM-MPI) with pgi compilers
+(flags: -O4 -fast -r8 -tp k8-64),fftw 2.1.5 and altas. Note that other
+combinations of compilation flags degrade the overall performance.
+
+1) 2 CPUs
+
+ test   nbndx   npwx    cpu-time
+
+    1     123   6435     229.95s
+    2    1152   1085     712.96s
+    3    1140   5940    2984.11s
+    4     486   3825    5536.06s
+
+ score = 93.09
+
+1) 4 CPUs
+
+ test   nbndx   npwx    cpu-time
+
+    1     123   3219     172.32s
+    2    1152    543     479.84s
+    3    1140   2969    1501.77s
+    4     486   1919    2778.20s
+
+ score = 158.30
+
+ overall speed-up:
+ 
+ CPUs   test1  test2  test3  test4
+ 
+  2      1.00   1.00   1.00   1.00
+  4      1.33   1.49   1.99   1.99
+
+-----
+
+This is an Athlon64 3200+ (first generation, 2GHz/1MB cache) machine with
+1 GB PC266 memory.
+
+1) 64bit mode, using the intel compilers.
+
+ test   nbndx   npwx    cpu-time
+
+    1     123  12869     464.09s
+    2    1152   2169    1450.26s
+    3    1140  11880    6354.82s
+    4     486   7557    9847.92s
+
+ score = 46.91
+
+2) 32bit mode using the athlon optimized (no sse2!) binary from above:
+
+ test   nbndx   npwx    cpu-time
+
+    1     123  12869     496.90s
+    2    1152   2169    1604.99s
+    3    1140  11880    6806.06s
+    4     486   7557   12708.63s
+
+ score = 41.44
+ 
+#
+#
+# ... RISC-class systems, 32/64 bit
+#
+#
+
+this is CINECA-SP4: IBM SP RS/6000 Power4 1300 MHz, HPSwitch "Colony"
+                    dual plane configuration, MPI, ESSL
+
+1) 2 CPUs
+
+ test   nbndx   npwx    cpu-time
+
+    1     123   6435     260.60s
+    2    1152   1085     709.74s
+    3    1140   5940    3389.19s
+    4     486   3825    4783.00s
+
+ score = 91.25
+
+2) 4 CPUs
+
+ test   nbndx   npwx    cpu-time
+
+    1     123   3219     145.80s
+    2    1152    543     446.31s
+    3    1140   2969    1719.76s
+    4     486   1919    2851.49s
+
+ sp4-2cpu score is 159.28
+
+ overall speed-up:
+ 
+ CPUs   test1  test2  test3  test4
+ 
+  2      1.00   1.00   1.00   1.00
+  4      1.79   1.59   1.97   1.68
+
+-----
+
+this is a compaq four way ES40 machine with 4GB PC100 registered ECC SDRAM
+(4-way interleaved) and 4 667MHz alpha ev6 cpus running redhat linux 7.1 
+with the compaq compilers and cxml, parallel version is using LAM-MPI:
+                                   
+1) serial run
+
+ test   nbndx   npwx    cpu-time
+
+    1     123  12869     865.62s
+    2    1152   2169    2539.38s
+    3    1140  11880   12259.32s
+    4     486   7557   19578.00s
+
+ score = 24.95
+
+-----
+
+2) 2 cpu run (using LAM-MPI)
+
+ test   nbndx   npwx    cpu-time
+
+    1     123   6435     582.59s
+    2    1152   1085    1596.77s
+    3    1140   5940    6757.48s
+    4     486   3825   12072.79s
+
+ score = 40.56
+
+3) 4 cpu run (using LAM-MPI)
+
+ test   nbndx   npwx    cpu-time
+
+    1     123   3219     289.70s
+    2    1152    543    1023.21s
+    3    1140   2969    3510.57s
+    4     486   1919    6623.84s
+
+ score = 73.82
+
+------
+
+this is a compaq two way DS20 machine with 4GB registered ECC SDRAM
+and 2 833MHz alpha ev67 cpus running redhat linux 7.1 with the compaq 
+compilers and cxml using LAM-MPI:
+
+ test   nbndx   npwx    cpu-time
+
+    1     123   6435     512.00s
+    2    1152   1085    1323.35s
+    3    1140   5940    6045.56s
+    4     486   3825   10101.55s
+
+ score = 47.27
+ 
+-----
+
+this is a 24 cpu sun fire machine with 750MHz ultra sparcIII processors.
+compiled in 32-bit mode (usually significantly faster on those cpus). 
+
+serial run
+
+ test   nbndx   npwx    cpu-time
+
+    1     123  12869    1239.45s
+    2    1152   2169    2941.29s
+    3    1140  11880   20016.52s
+    4     486   7557   22682.78s
+
+ score = 19.10
+
+-----
+
+this is an Intel Core2 biprocessor E6850 @ 3.00GHz with Intel compiler
+and MKL (em64t) both v.10 - internal FFTW. pre4.0 release, Jan 2008
+
+Serial run (OPT_NUM_THREAD=1) with another job running on the second CPU
+
+ test   nbndx   npwx    cpu-time
+
+    1      41  12869     227.24s
+    2     384   2169     475.41s
+    3     380  11880    2676.90s
+    4     162   7557    3294.48s
+
+ score = 123.54
+
+Serial run (OPT_NUM_THREAD=1) with with empty machine
+
+ test   nbndx   npwx    cpu-time
+
+    1      41  12869     176.80s
+    2     384   2169     342.22s
+    3     380  11880    2009.26s
+    4     162   7557    2433.50s
+
+ score = 166.42
+
+-----
+
+this is an Intel Core2 biprocessor E6850 @ 3.00GHz with Intel compiler
+and MKL (em64t) both v.10 - MKL interface to FFTW3 library. pre4.1 release,
+Oct.2008, Serial run (OPT_NUM_THREAD=1), empty machine 
+
+ test   nbndx   npwx    cpu-time
+
+    1      41  12869     145.31s
+    2     384   2169     325.18s
+    3     380  11880    1873.94s
+    4     162   7557    2174.73s
+
+ IntelCore2 score is 184.03 (100.00 is the score of the reference system)
+
+As above, FFTW3 external library
+
+ test   nbndx   npwx    cpu-time
+
+    1      41  12869     157.80s
+    2     384   2169     337.85s
+    3     380  11880    1932.68s
+    4     162   7557    2371.17s
+
+ IntelCore2 score is 173.33 (100.00 is the score of the reference system)
+
+As above,  FFTW internal library
+
+ test   nbndx   npwx    cpu-time
+
+    1      41  12869     157.05s
+    2     384   2169     337.54s
+    3     380  11880    1924.01s
+    4     162   7557    2332.90s
+
+ IntelCore2 score is 174.56 (100.00 is the score of the reference system)
+
