@@ -1,0 +1,46 @@
+ &control
+    calculation='scf'
+    restart_mode='from_scratch',
+    prefix='CrI3hex'
+    pseudo_dir = './'
+    outdir='./'
+    verbosity='high'
+    forc_conv_thr = 1.d-6
+    tprnfor = .true.
+    tstress = .true.
+ /
+ &system
+    ibrav = 4, 
+    celldm(1) = 12.959747, 
+    celldm(3) = 3, 
+    !assume_isolated = '2D'
+    nat = 8, 
+    ntyp = 2,
+    nbnd = 64,
+    ecutwfc = 80.0,
+    occupations = 'fixed',
+    smearing = 'gauss',
+    degauss = 0.001,
+    starting_magnetization(1) = 1.0
+ /
+ &electrons
+    electron_maxstep = 50 
+    conv_thr =  1.d-11
+    mixing_beta = 0.7
+ /
+ &ions
+/
+ATOMIC_SPECIES
+Cr     51.996    Cr_fr_lda.upf
+I     126.9045   I_fr_lda.upf  
+ATOMIC_POSITIONS {crystal}
+I       -0.000000000   0.646231455  -0.074475069
+I        0.646231455   0.000000000  -0.074475069
+I        0.353768545   0.353768545  -0.074475069
+Cr       0.333333333   0.666666667   0.000000000
+Cr       0.666666667   0.333333333   0.000000000
+I       -0.000000000   0.353768545   0.074475069
+I        0.353768545  -0.000000000   0.074475069
+I        0.646231455   0.646231455   0.074475069
+K_POINTS {automatic}
+8 8 1 0 0 0
