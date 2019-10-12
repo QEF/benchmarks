@@ -1,0 +1,10 @@
+Dielectric contant and Born Charges for for SiO2 O.R. 36  atoms supercell
+&inputph
+  prefix='SiO2_OR_144_us'  
+  tr2_ph=1.0d-14,
+  epsil=.false.,
+  fildyn='SiO2_144-2.dynG',
+  trans=.true.
+  modenum=10
+ /
+0.0 0.0 0.0
