@@ -1,0 +1,9 @@
+Dielectric contant and Born Charges for cubic byxbiite 80 atoms
+&inputph
+  prefix='LaO-byx-80_NC'  
+  tr2_ph=1.0d-14,
+  epsil=.true.,
+  fildyn='LaO_80_NC.dynG',
+  trans=.false.
+ /
+0.0 0.0 0.0
