@@ -1,6 +1,6 @@
 &CONTROL
 calculation='scf'
-prefix='SiO2_OR_36-2_nc'
+prefix='SiO2_OR_36_nc'
 restart_mode='from_scratch'
 title="'srtio_bulk'"
 tprnfor=.true.

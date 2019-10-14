@@ -2,7 +2,7 @@
 
 The system is 36 atoms orthorombic super-cell of quartz SiO_2. 
 linear response to homogeneous electric field using 
-norm conserving pseudopotentials, ultrasoft pseudopotentials and the PAW method.Tests response to electric field and atomic displacements.   
+norm conserving pseudopotentials, ultrasoft pseudopotentials and the PAW method.Tests response to electric field and 1 atomic displacements mode.   
  
 
 

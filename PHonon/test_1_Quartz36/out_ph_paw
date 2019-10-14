@@ -1,0 +1,1091 @@
+
+     Program PHONON v.6.4.1 starts on 14Oct2019 at 13:49:46 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on     768 processor cores
+     Number of MPI processes:                96
+     Threads/MPI process:                     8
+
+     MPI processes distributed on     4 nodes
+     K-points division:     npool     =       4
+     R & G space division:  proc/nbgrp/npool/nimage =      24
+
+     Reading data from directory:
+     ./SiO2_OR_36_paw.save/
+     Message from routine read_upf::
+     Pseudo file Si.pbesol-n-kjpaw_psl.0.1.UPF has been fixed on the fly.
+To avoid this message in the future, permanently fix 
+ your pseudo files following these instructions: 
+https://gitlab.com/QEF/q-e/blob/master/upftools/how_to_fix_upf.md
+     Message from routine read_upf::
+     Pseudo file O.pbesol-n-kjpaw_psl.0.1.UPF has been fixed on the fly.
+To avoid this message in the future, permanently fix 
+ your pseudo files following these instructions: 
+https://gitlab.com/QEF/q-e/blob/master/upftools/how_to_fix_upf.md
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation      = PBESOL ( 1  4 10  8 0 0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+               file Si.pbesol-n-kjpaw_psl.0.1.UPF: wavefunction(s)  3S renormalized
+               file O.pbesol-n-kjpaw_psl.0.1.UPF: wavefunction(s)  2P renormalized
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         247     158     42                 8483     4348     618
+     Max         248     160     43                 8487     4349     621
+     Sum        5941    3811   1031               203635   104367   14891
+ 
+
+     Check: negative core charge=   -0.000008
+
+     Calculation of q =    0.0000000   0.0000000   0.0000000
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     scalapack distributed-memory algorithm (size of sub-group:  3*  3 procs)
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         247     158     42                 8483     4348     618
+     Max         248     160     43                 8487     4349     621
+     Sum        5941    3811   1031               203635   104367   14891
+ 
+
+     Title: 
+     Dielectric contant and Born Charges for for SiO2 O.R. 36  atoms supercell  
+
+
+     bravais-lattice index     =            8
+     lattice parameter (alat)  =      18.5722  a.u.
+     unit-cell volume          =    3051.0810 (a.u.)^3
+     number of atoms/cell      =           36
+     number of atomic types    =            2
+     number of electrons       =       192.00
+     number of Kohn-Sham states=           96
+     kinetic-energy cutoff     =      40.0000  Ry
+     charge density cutoff     =     250.0000  Ry
+     Exchange-correlation      = PBESOL ( 1  4 10  8 0 0)
+
+     celldm(1)=  18.572236  celldm(2)=   0.866025  celldm(3)=   0.549959
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   0.866025   0.000000 )  
+               a(3) = (   0.000000   0.000000   0.549959 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  1.154701  0.000000 )  
+               b(3) = (  0.000000  0.000000  1.818316 )  
+
+
+     PseudoPot. # 1 for Si read from file:
+     ./Si.pbesol-n-kjpaw_psl.0.1.UPF
+     MD5 check sum: ef8dfa349e97d40a6d24815503f60e07
+     Pseudo is Projector augmented-wave + core cor, Zval =  4.0
+     Generated using "atomic" code by A. Dal Corso v.5.0.2 svn rev. 9415
+     Shape of augmentation charge: PSQ
+     Using radial grid of 1141 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for O  read from file:
+     ./O.pbesol-n-kjpaw_psl.0.1.UPF
+     MD5 check sum: f72b915327cd4515c380d1166bf6c7bc
+     Pseudo is Projector augmented-wave + core cor, Zval =  6.0
+     Generated using "atomic" code by A. Dal Corso v.5.0.2 svn rev. 9415
+     Shape of augmentation charge: BESSEL
+     Using radial grid of 1095 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        Si             4.00    47.86700     Si( 1.00)
+        O              6.00    15.99940     O ( 1.00)
+
+      2 Sym. Ops. (no inversion) found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Si  tau(   1) = (   0.2337554   0.0000000   0.0000000  )
+         2           Si  tau(   2) = (   0.7337554   0.0000000   0.0000000  )
+         3           Si  tau(   3) = (   0.4837537   0.4330127   0.0000000  )
+         4           Si  tau(   4) = (   0.9837538   0.4330127   0.0000000  )
+         5           O   tau(   5) = (   0.1378512   0.7484475   0.0633684  )
+         6           O   tau(   6) = (   0.6378512   0.7484474   0.0633685  )
+         7           O   tau(   7) = (   0.3878445   0.3154355   0.0633565  )
+         8           O   tau(   8) = (   0.8878445   0.3154355   0.0633565  )
+         9           O   tau(   9) = (   0.3292547   0.0605928   0.1199557  )
+        10           O   tau(  10) = (   0.8292547   0.0605929   0.1199558  )
+        11           O   tau(  11) = (   0.0792569   0.4935954   0.1199565  )
+        12           O   tau(  12) = (   0.5792570   0.4935954   0.1199565  )
+        13           Si  tau(  13) = (   0.3831189   0.2024439   0.1833182  )
+        14           Si  tau(  14) = (   0.8831189   0.2024438   0.1833182  )
+        15           Si  tau(  15) = (   0.1331213   0.6354414   0.1833212  )
+        16           Si  tau(  16) = (   0.6331213   0.6354415   0.1833212  )
+        17           O   tau(  17) = (   0.0328985   0.1781792   0.2466809  )
+        18           O   tau(  18) = (   0.5328986   0.1781792   0.2466809  )
+        19           O   tau(  19) = (   0.2828994   0.6111733   0.2466838  )
+        20           O   tau(  20) = (   0.7828994   0.6111733   0.2466838  )
+        21           O   tau(  21) = (   0.0328985   0.6878462   0.3032784  )
+        22           O   tau(  22) = (   0.5328986   0.6878462   0.3032784  )
+        23           O   tau(  23) = (   0.2828994   0.2548521   0.3032755  )
+        24           O   tau(  24) = (   0.7828994   0.2548521   0.3032755  )
+        25           Si  tau(  25) = (   0.3831189   0.6635815   0.3666411  )
+        26           Si  tau(  26) = (   0.8831189   0.6635816   0.3666411  )
+        27           Si  tau(  27) = (   0.1331213   0.2305840   0.3666381  )
+        28           Si  tau(  28) = (   0.6331213   0.2305839   0.3666381  )
+        29           O   tau(  29) = (   0.3292547   0.8054326   0.4300036  )
+        30           O   tau(  30) = (   0.8292547   0.8054325   0.4300035  )
+        31           O   tau(  31) = (   0.0792569   0.3724300   0.4300028  )
+        32           O   tau(  32) = (   0.5792570   0.3724300   0.4300028  )
+        33           O   tau(  33) = (   0.1378512   0.1175779   0.4865909  )
+        34           O   tau(  34) = (   0.6378512   0.1175780   0.4865908  )
+        35           O   tau(  35) = (   0.3878445   0.5505899   0.4866028  )
+        36           O   tau(  36) = (   0.8878445   0.5505899   0.4866028  )
+
+     number of k points=     8
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.2500000   0.1443376   0.2272895), wk =   0.2500000
+        k(    2) = (   0.2500000   0.1443376   0.6818686), wk =   0.2500000
+        k(    3) = (   0.2500000   0.4330127   0.2272895), wk =   0.2500000
+        k(    4) = (   0.2500000   0.4330127   0.6818686), wk =   0.2500000
+        k(    5) = (  -0.2500000   0.1443376  -0.2272895), wk =   0.2500000
+        k(    6) = (  -0.2500000   0.1443376  -0.6818686), wk =   0.2500000
+        k(    7) = (  -0.2500000   0.4330127  -0.2272895), wk =   0.2500000
+        k(    8) = (  -0.2500000   0.4330127  -0.6818686), wk =   0.2500000
+
+     Dense  grid:   203635 G-vectors     FFT dimensions: (  96,  81,  54)
+
+     Smooth grid:   104367 G-vectors     FFT dimensions: (  75,  72,  45)
+
+     Estimated max dynamical RAM per process >      19.08 MB
+
+     Estimated total dynamical RAM >       1.79 GB
+
+     Check: negative core charge=   -0.000008
+
+     The potential is recalculated from file :
+     ./_ph0/SiO2_OR_36_paw.save/charge-density
+
+     Starting wfcs are  144 atomic wfcs
+     Checking if some PAW data can be deallocated... 
+
+     Band Structure Calculation
+     Davidson diagonalization with overlap
+
+     ethr =  5.21E-12,  avg # of iterations = 14.2
+
+     total cpu time spent up to now is       28.2 secs
+
+     End of band structure calculation
+
+          k = 0.2500 0.1443 0.2273 ( 13039 PWs)   bands (ev):
+
+   -16.7842 -16.5353 -16.3584 -16.2309 -15.9787 -15.8648 -15.7129 -15.6026
+   -15.3293 -15.3070 -15.2692 -15.1087 -14.7357 -14.7351 -14.7255 -14.7089
+   -14.7032 -14.6920 -14.6851 -14.6735 -14.6698 -14.6582 -14.6567 -14.6437
+    -6.1052  -5.9115  -5.8853  -5.8750  -5.2138  -5.0077  -4.8048  -4.5102
+    -3.9715  -3.6185  -3.4126  -3.0904  -2.9355  -2.9338  -2.9225  -2.8815
+    -2.7895  -2.7356  -2.7211  -2.7070  -2.5444  -2.2971  -2.1401  -2.0758
+    -0.6846  -0.6333  -0.6159  -0.6081  -0.4610  -0.4374  -0.3714  -0.3490
+    -0.3296  -0.2481  -0.1722  -0.1717   0.0999   0.1524   0.1548   0.3504
+     0.4327   0.4411   0.4827   0.6075   0.7047   0.7407   0.8521   0.9134
+     0.9602   1.0213   1.0454   1.0595   1.1866   1.2244   1.2415   1.2420
+     1.4113   1.4579   1.4618   1.5199   1.6745   1.7197   1.8137   1.9318
+     2.0794   2.1051   2.1170   2.1264   2.3408   2.4122   2.4150   2.4170
+
+          k = 0.2500 0.1443 0.6819 ( 13028 PWs)   bands (ev):
+
+   -16.5512 -16.3791 -16.3009 -16.2616 -16.1258 -15.9867 -15.8616 -15.7922
+   -15.4716 -15.3705 -15.1524 -14.7962 -14.7554 -14.7514 -14.7289 -14.7199
+   -14.7037 -14.6899 -14.6877 -14.6851 -14.6730 -14.6664 -14.6587 -14.6398
+    -6.6252  -6.0784  -5.7459  -5.5373  -4.8469  -4.7507  -4.5338  -4.2532
+    -4.0362  -3.9009  -3.8111  -3.5210  -3.0288  -2.9574  -2.8801  -2.8389
+    -2.7813  -2.6233  -2.5062  -2.5047  -2.4360  -2.4144  -2.3514  -2.2256
+    -0.7950  -0.7609  -0.7255  -0.6170  -0.5322  -0.5080  -0.4741  -0.2276
+    -0.1712  -0.1516  -0.0589  -0.0102   0.1356   0.2613   0.2769   0.4166
+     0.4664   0.4807   0.4818   0.5353   0.6300   0.7875   0.8300   0.9276
+     0.9344   1.0473   1.1013   1.1988   1.3119   1.3167   1.3198   1.3618
+     1.3868   1.4976   1.5248   1.5549   1.6517   1.7135   1.8064   1.8623
+     1.9067   1.9728   2.0479   2.1125   2.2329   2.2664   2.3114   2.3894
+
+          k = 0.2500 0.4330 0.2273 ( 13042 PWs)   bands (ev):
+
+   -16.6956 -16.5353 -16.4725 -16.3559 -15.8735 -15.7639 -15.7129 -15.6289
+   -15.2960 -15.2870 -15.2692 -15.1743 -14.7382 -14.7302 -14.7255 -14.7070
+   -14.7049 -14.6920 -14.6916 -14.6760 -14.6701 -14.6666 -14.6583 -14.6465
+    -6.0073  -5.9115  -5.8847  -5.8741  -5.1642  -5.0077  -4.9721  -4.8034
+    -3.6176  -3.4126  -3.4065  -3.2018  -2.9564  -2.9338  -2.9304  -2.9125
+    -2.7572  -2.7456  -2.7291  -2.7211  -2.4957  -2.2972  -2.2211  -2.1536
+    -0.6880  -0.6846  -0.6795  -0.6737  -0.4292  -0.3510  -0.3469  -0.3296
+    -0.2172  -0.1995  -0.1717  -0.1291   0.0141   0.0999   0.2137   0.2381
+     0.4249   0.4411   0.5072   0.5342   0.7435   0.7912   0.8521   0.8621
+     0.9719   0.9956   1.0212   1.0595   1.2420   1.2581   1.2645   1.3174
+     1.4404   1.4579   1.4971   1.5182   1.6372   1.7198   1.7549   1.7558
+     2.0941   2.1170   2.1368   2.1645   2.3746   2.3913   2.4150   2.4256
+
+          k = 0.2500 0.4330 0.6819 ( 13030 PWs)   bands (ev):
+
+   -16.4825 -16.3791 -16.3501 -16.2975 -16.0821 -15.9867 -15.9359 -15.8729
+   -15.3578 -15.2469 -15.1524 -14.9229 -14.7558 -14.7406 -14.7289 -14.7065
+   -14.7039 -14.6903 -14.6899 -14.6736 -14.6733 -14.6664 -14.6630 -14.6523
+    -6.4211  -6.0784  -5.9586  -5.7452  -4.7471  -4.6350  -4.5338  -4.3506
+    -3.9048  -3.8111  -3.7990  -3.6579  -2.9533  -2.8965  -2.8801  -2.8269
+    -2.8076  -2.6233  -2.5528  -2.4905  -2.4514  -2.3685  -2.3514  -2.2822
+    -0.7748  -0.7303  -0.7255  -0.6402  -0.6115  -0.6048  -0.5080  -0.3084
+    -0.0901  -0.0484  -0.0102   0.0417   0.1356   0.1391   0.1978   0.2896
+     0.4421   0.4614   0.4664   0.5318   0.7641   0.8820   0.9276   0.9729
+     0.9939   1.1013   1.1210   1.1663   1.1940   1.3168   1.3259   1.3518
+     1.3912   1.4999   1.5249   1.5444   1.6224   1.6517   1.7679   1.8612
+     1.9124   1.9741   2.0479   2.1783   2.2286   2.3114   2.3374   2.3525
+
+          k =-0.2500 0.1443-0.2273 ( 13039 PWs)   bands (ev):
+
+   -16.7840 -16.5339 -16.3559 -16.2309 -15.9788 -15.8735 -15.7242 -15.6050
+   -15.3293 -15.2959 -15.2518 -15.1038 -14.7382 -14.7357 -14.7289 -14.7089
+   -14.7049 -14.6965 -14.6837 -14.6735 -14.6701 -14.6625 -14.6581 -14.6419
+    -6.1047  -5.9101  -5.8853  -5.8741  -5.2136  -5.0065  -4.8034  -4.5102
+    -3.9715  -3.6175  -3.4093  -3.0860  -2.9391  -2.9180  -2.9125  -2.8815
+    -2.7779  -2.7455  -2.7338  -2.7070  -2.5602  -2.3187  -2.1536  -2.0758
+    -0.7294  -0.6880  -0.6301  -0.6159  -0.4374  -0.4292  -0.3490  -0.3465
+    -0.3318  -0.2172  -0.1798  -0.1263   0.1685   0.1995   0.2381   0.3504
+     0.4183   0.4249   0.4327   0.6074   0.7436   0.7797   0.8461   0.8621
+     0.9134   0.9542   0.9773   1.0335   1.1866   1.2403   1.2644   1.2795
+     1.4114   1.4908   1.4945   1.4971   1.6680   1.6978   1.7558   1.9318
+     2.0794   2.1417   2.1645   2.1810   2.3252   2.3777   2.3913   2.4122
+
+          k =-0.2500 0.1443-0.6819 ( 13028 PWs)   bands (ev):
+
+   -16.5507 -16.3753 -16.2975 -16.2616 -16.1270 -15.9955 -15.8729 -15.7922
+   -15.4716 -15.3578 -15.1388 -14.7889 -14.7558 -14.7554 -14.7346 -14.7199
+   -14.7039 -14.6942 -14.6851 -14.6843 -14.6733 -14.6709 -14.6651 -14.6376
+    -6.6249  -6.0773  -5.7452  -5.5373  -4.8469  -4.7471  -4.5291  -4.2523
+    -4.0362  -3.9047  -3.8162  -3.5214  -3.0354  -2.9475  -2.8658  -2.8270
+    -2.7813  -2.6185  -2.5048  -2.4906  -2.4513  -2.4359  -2.3840  -2.2334
+    -0.7950  -0.7748  -0.7423  -0.6048  -0.5366  -0.4951  -0.4741  -0.2276
+    -0.1810  -0.1494  -0.0484  -0.0152   0.1776   0.2851   0.2896   0.4166
+     0.5051   0.5111   0.5318   0.5353   0.6300   0.7641   0.7918   0.8613
+     0.8746   1.0691   1.0869   1.1940   1.2923   1.3110   1.3198   1.3259
+     1.3618   1.5014   1.5444   1.5549   1.7415   1.7679   1.8064   1.8623
+     1.9125   1.9743   2.0945   2.1125   2.2286   2.2384   2.2826   2.3400
+
+          k =-0.2500 0.4330-0.2273 ( 13042 PWs)   bands (ev):
+
+   -16.6956 -16.5339 -16.4693 -16.3584 -15.8648 -15.7830 -15.7242 -15.6288
+   -15.3070 -15.2587 -15.2518 -15.1743 -14.7357 -14.7351 -14.7289 -14.7070
+   -14.7032 -14.7009 -14.6965 -14.6760 -14.6698 -14.6647 -14.6581 -14.6465
+    -6.0073  -5.9102  -5.8824  -5.8749  -5.1642  -5.0065  -4.9698  -4.8048
+    -3.6186  -3.4092  -3.4024  -3.2019  -2.9304  -2.9225  -2.9180  -2.9107
+    -2.8029  -2.7357  -2.7338  -2.7290  -2.4958  -2.3187  -2.2523  -2.1401
+    -0.7502  -0.7294  -0.6795  -0.6333  -0.4610  -0.3616  -0.3469  -0.3318
+    -0.2481  -0.1291  -0.1263  -0.1163   0.1524   0.1995   0.2017   0.2138
+     0.4183   0.4356   0.4827   0.5342   0.7047   0.7914   0.8461   0.8575
+     0.9542   0.9602   0.9719   1.0211   1.2415   1.2581   1.2794   1.3487
+     1.4618   1.4945   1.5183   1.5262   1.6318   1.6372   1.6680   1.8137
+     2.1050   2.1369   2.1810   2.2214   2.3532   2.3745   2.3777   2.4170
+
+          k =-0.2500 0.4330-0.6819 ( 13030 PWs)   bands (ev):
+
+   -16.4825 -16.3754 -16.3432 -16.3009 -16.0821 -15.9955 -15.9542 -15.8616
+   -15.3705 -15.2228 -15.1387 -14.9229 -14.7514 -14.7491 -14.7347 -14.7065
+   -14.7037 -14.6955 -14.6942 -14.6736 -14.6730 -14.6651 -14.6626 -14.6523
+    -6.4211  -6.0773  -5.9569  -5.7459  -4.7507  -4.6273  -4.5291  -4.3506
+    -3.9009  -3.8161  -3.8077  -3.6580  -2.9533  -2.8695  -2.8658  -2.8388
+    -2.8076  -2.6185  -2.5397  -2.5063  -2.4316  -2.4143  -2.3840  -2.2822
+    -0.7653  -0.7609  -0.7423  -0.6403  -0.6169  -0.5790  -0.4951  -0.3084
+    -0.0901  -0.0590  -0.0152   0.0264   0.1776   0.1978   0.2217   0.2769
+     0.4614   0.4818   0.5040   0.5111   0.8301   0.8613   0.8750   0.8820
+     0.9939   1.0604   1.0869   1.1663   1.1987   1.2923   1.3029   1.3868
+     1.3912   1.4976   1.5014   1.5135   1.7135   1.7415   1.7702   1.8612
+     1.9067   1.9988   2.0945   2.1783   2.2384   2.2664   2.2693   2.3374
+
+     highest occupied level (ev):     2.4256
+
+     Writing output data file SiO2_OR_36_paw.save/
+
+     Dielectric contant and Born Charges for for SiO2 O.R. 36  atoms supercell  
+
+     bravais-lattice index     =            8
+     lattice parameter (alat)  =      18.5722  a.u.
+     unit-cell volume          =    3051.0810 (a.u.)^3
+     number of atoms/cell      =           36
+     number of atomic types    =            2
+     kinetic-energy cut-off    =      40.0000  Ry
+     charge density cut-off    =     250.0000  Ry
+     convergence threshold     =      1.0E-14
+     beta                      =       0.7000
+     number of iterations used =            4
+     Exchange-correlation      = PBESOL ( 1  4 10  8 0 0)
+
+
+     celldm(1)=   18.57224  celldm(2)=    0.86603  celldm(3)=    0.54996
+     celldm(4)=    0.00000  celldm(5)=    0.00000  celldm(6)=    0.00000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (  1.0000  0.0000  0.0000 )  
+               a(2) = (  0.0000  0.8660  0.0000 )  
+               a(3) = (  0.0000  0.0000  0.5500 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.0000  0.0000  0.0000 )  
+               b(2) = (  0.0000  1.1547  0.0000 )  
+               b(3) = (  0.0000  0.0000  1.8183 )  
+
+
+     Atoms inside the unit cell: 
+
+     Cartesian axes
+
+     site n.  atom      mass           positions (alat units)
+        1     Si  47.8670   tau(    1) = (    0.23376    0.00000    0.00000  )
+        2     Si  47.8670   tau(    2) = (    0.73376    0.00000    0.00000  )
+        3     Si  47.8670   tau(    3) = (    0.48375    0.43301    0.00000  )
+        4     Si  47.8670   tau(    4) = (    0.98375    0.43301    0.00000  )
+        5     O   15.9994   tau(    5) = (    0.13785    0.74845    0.06337  )
+        6     O   15.9994   tau(    6) = (    0.63785    0.74845    0.06337  )
+        7     O   15.9994   tau(    7) = (    0.38784    0.31544    0.06336  )
+        8     O   15.9994   tau(    8) = (    0.88784    0.31544    0.06336  )
+        9     O   15.9994   tau(    9) = (    0.32925    0.06059    0.11996  )
+       10     O   15.9994   tau(   10) = (    0.82925    0.06059    0.11996  )
+       11     O   15.9994   tau(   11) = (    0.07926    0.49360    0.11996  )
+       12     O   15.9994   tau(   12) = (    0.57926    0.49360    0.11996  )
+       13     Si  47.8670   tau(   13) = (    0.38312    0.20244    0.18332  )
+       14     Si  47.8670   tau(   14) = (    0.88312    0.20244    0.18332  )
+       15     Si  47.8670   tau(   15) = (    0.13312    0.63544    0.18332  )
+       16     Si  47.8670   tau(   16) = (    0.63312    0.63544    0.18332  )
+       17     O   15.9994   tau(   17) = (    0.03290    0.17818    0.24668  )
+       18     O   15.9994   tau(   18) = (    0.53290    0.17818    0.24668  )
+       19     O   15.9994   tau(   19) = (    0.28290    0.61117    0.24668  )
+       20     O   15.9994   tau(   20) = (    0.78290    0.61117    0.24668  )
+       21     O   15.9994   tau(   21) = (    0.03290    0.68785    0.30328  )
+       22     O   15.9994   tau(   22) = (    0.53290    0.68785    0.30328  )
+       23     O   15.9994   tau(   23) = (    0.28290    0.25485    0.30328  )
+       24     O   15.9994   tau(   24) = (    0.78290    0.25485    0.30328  )
+       25     Si  47.8670   tau(   25) = (    0.38312    0.66358    0.36664  )
+       26     Si  47.8670   tau(   26) = (    0.88312    0.66358    0.36664  )
+       27     Si  47.8670   tau(   27) = (    0.13312    0.23058    0.36664  )
+       28     Si  47.8670   tau(   28) = (    0.63312    0.23058    0.36664  )
+       29     O   15.9994   tau(   29) = (    0.32925    0.80543    0.43000  )
+       30     O   15.9994   tau(   30) = (    0.82925    0.80543    0.43000  )
+       31     O   15.9994   tau(   31) = (    0.07926    0.37243    0.43000  )
+       32     O   15.9994   tau(   32) = (    0.57926    0.37243    0.43000  )
+       33     O   15.9994   tau(   33) = (    0.13785    0.11758    0.48659  )
+       34     O   15.9994   tau(   34) = (    0.63785    0.11758    0.48659  )
+       35     O   15.9994   tau(   35) = (    0.38784    0.55059    0.48660  )
+       36     O   15.9994   tau(   36) = (    0.88784    0.55059    0.48660  )
+
+     Computing dynamical matrix for 
+                    q = (   0.0000000   0.0000000   0.0000000 )
+ 
+      2 Sym.Ops. (no q -> -q+G )
+
+
+     G cutoff = 2184.2817  (   8484 G-vectors)     FFT grid: ( 96, 81, 54)
+     G cutoff = 1397.9403  (   4348 G-vectors)  smooth grid: ( 75, 72, 45)
+     number of k points=     8
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.2500000   0.1443376   0.2272895), wk =   0.2500000
+        k(    2) = (   0.2500000   0.1443376   0.6818686), wk =   0.2500000
+        k(    3) = (   0.2500000   0.4330127   0.2272895), wk =   0.2500000
+        k(    4) = (   0.2500000   0.4330127   0.6818686), wk =   0.2500000
+        k(    5) = (  -0.2500000   0.1443376  -0.2272895), wk =   0.2500000
+        k(    6) = (  -0.2500000   0.1443376  -0.6818686), wk =   0.2500000
+        k(    7) = (  -0.2500000   0.4330127  -0.2272895), wk =   0.2500000
+        k(    8) = (  -0.2500000   0.4330127  -0.6818686), wk =   0.2500000
+
+     PseudoPot. # 1 for Si read from file:
+     ./Si.pbesol-n-kjpaw_psl.0.1.UPF
+     MD5 check sum: ef8dfa349e97d40a6d24815503f60e07
+     Pseudo is Projector augmented-wave + core cor, Zval =  4.0
+     Generated using "atomic" code by A. Dal Corso v.5.0.2 svn rev. 9415
+     Shape of augmentation charge: PSQ
+     Using radial grid of 1141 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for O  read from file:
+     ./O.pbesol-n-kjpaw_psl.0.1.UPF
+     MD5 check sum: f72b915327cd4515c380d1166bf6c7bc
+     Pseudo is Projector augmented-wave + core cor, Zval =  6.0
+     Generated using "atomic" code by A. Dal Corso v.5.0.2 svn rev. 9415
+     Shape of augmentation charge: BESSEL
+     Using radial grid of 1095 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+
+     Electric field:
+     Dielectric constant
+     Born effective charges as d Force / d E
+
+
+     Atomic displacements:
+     There are 108 irreducible representations
+
+     Representation     1      1 modes -  Not done in this run
+
+     Representation     2      1 modes -  Not done in this run
+
+     Representation     3      1 modes -  Not done in this run
+
+     Representation     4      1 modes -  Not done in this run
+
+     Representation     5      1 modes -  Not done in this run
+
+     Representation     6      1 modes -  Not done in this run
+
+     Representation     7      1 modes -  Not done in this run
+
+     Representation     8      1 modes -  Not done in this run
+
+     Representation     9      1 modes -  Not done in this run
+
+     Representation    10      1 modes -  To be done
+
+     Representation    11      1 modes -  Not done in this run
+
+     Representation    12      1 modes -  Not done in this run
+
+     Representation    13      1 modes -  Not done in this run
+
+     Representation    14      1 modes -  Not done in this run
+
+     Representation    15      1 modes -  Not done in this run
+
+     Representation    16      1 modes -  Not done in this run
+
+     Representation    17      1 modes -  Not done in this run
+
+     Representation    18      1 modes -  Not done in this run
+
+     Representation    19      1 modes -  Not done in this run
+
+     Representation    20      1 modes -  Not done in this run
+
+     Representation    21      1 modes -  Not done in this run
+
+     Representation    22      1 modes -  Not done in this run
+
+     Representation    23      1 modes -  Not done in this run
+
+     Representation    24      1 modes -  Not done in this run
+
+     Representation    25      1 modes -  Not done in this run
+
+     Representation    26      1 modes -  Not done in this run
+
+     Representation    27      1 modes -  Not done in this run
+
+     Representation    28      1 modes -  Not done in this run
+
+     Representation    29      1 modes -  Not done in this run
+
+     Representation    30      1 modes -  Not done in this run
+
+     Representation    31      1 modes -  Not done in this run
+
+     Representation    32      1 modes -  Not done in this run
+
+     Representation    33      1 modes -  Not done in this run
+
+     Representation    34      1 modes -  Not done in this run
+
+     Representation    35      1 modes -  Not done in this run
+
+     Representation    36      1 modes -  Not done in this run
+
+     Representation    37      1 modes -  Not done in this run
+
+     Representation    38      1 modes -  Not done in this run
+
+     Representation    39      1 modes -  Not done in this run
+
+     Representation    40      1 modes -  Not done in this run
+
+     Representation    41      1 modes -  Not done in this run
+
+     Representation    42      1 modes -  Not done in this run
+
+     Representation    43      1 modes -  Not done in this run
+
+     Representation    44      1 modes -  Not done in this run
+
+     Representation    45      1 modes -  Not done in this run
+
+     Representation    46      1 modes -  Not done in this run
+
+     Representation    47      1 modes -  Not done in this run
+
+     Representation    48      1 modes -  Not done in this run
+
+     Representation    49      1 modes -  Not done in this run
+
+     Representation    50      1 modes -  Not done in this run
+
+     Representation    51      1 modes -  Not done in this run
+
+     Representation    52      1 modes -  Not done in this run
+
+     Representation    53      1 modes -  Not done in this run
+
+     Representation    54      1 modes -  Not done in this run
+
+     Representation    55      1 modes -  Not done in this run
+
+     Representation    56      1 modes -  Not done in this run
+
+     Representation    57      1 modes -  Not done in this run
+
+     Representation    58      1 modes -  Not done in this run
+
+     Representation    59      1 modes -  Not done in this run
+
+     Representation    60      1 modes -  Not done in this run
+
+     Representation    61      1 modes -  Not done in this run
+
+     Representation    62      1 modes -  Not done in this run
+
+     Representation    63      1 modes -  Not done in this run
+
+     Representation    64      1 modes -  Not done in this run
+
+     Representation    65      1 modes -  Not done in this run
+
+     Representation    66      1 modes -  Not done in this run
+
+     Representation    67      1 modes -  Not done in this run
+
+     Representation    68      1 modes -  Not done in this run
+
+     Representation    69      1 modes -  Not done in this run
+
+     Representation    70      1 modes -  Not done in this run
+
+     Representation    71      1 modes -  Not done in this run
+
+     Representation    72      1 modes -  Not done in this run
+
+     Representation    73      1 modes -  Not done in this run
+
+     Representation    74      1 modes -  Not done in this run
+
+     Representation    75      1 modes -  Not done in this run
+
+     Representation    76      1 modes -  Not done in this run
+
+     Representation    77      1 modes -  Not done in this run
+
+     Representation    78      1 modes -  Not done in this run
+
+     Representation    79      1 modes -  Not done in this run
+
+     Representation    80      1 modes -  Not done in this run
+
+     Representation    81      1 modes -  Not done in this run
+
+     Representation    82      1 modes -  Not done in this run
+
+     Representation    83      1 modes -  Not done in this run
+
+     Representation    84      1 modes -  Not done in this run
+
+     Representation    85      1 modes -  Not done in this run
+
+     Representation    86      1 modes -  Not done in this run
+
+     Representation    87      1 modes -  Not done in this run
+
+     Representation    88      1 modes -  Not done in this run
+
+     Representation    89      1 modes -  Not done in this run
+
+     Representation    90      1 modes -  Not done in this run
+
+     Representation    91      1 modes -  Not done in this run
+
+     Representation    92      1 modes -  Not done in this run
+
+     Representation    93      1 modes -  Not done in this run
+
+     Representation    94      1 modes -  Not done in this run
+
+     Representation    95      1 modes -  Not done in this run
+
+     Representation    96      1 modes -  Not done in this run
+
+     Representation    97      1 modes -  Not done in this run
+
+     Representation    98      1 modes -  Not done in this run
+
+     Representation    99      1 modes -  Not done in this run
+
+     Representation   100      1 modes -  Not done in this run
+
+     Representation   101      1 modes -  Not done in this run
+
+     Representation   102      1 modes -  Not done in this run
+
+     Representation   103      1 modes -  Not done in this run
+
+     Representation   104      1 modes -  Not done in this run
+
+     Representation   105      1 modes -  Not done in this run
+
+     Representation   106      1 modes -  Not done in this run
+
+     Representation   107      1 modes -  Not done in this run
+
+     Representation   108      1 modes -  Not done in this run
+
+     Compute atoms:     4,
+
+
+
+     Alpha used in Ewald sum =   2.1000
+     PHONON       :  29m59.90s CPU   4m50.20s WALL
+
+
+     Electric Fields Calculation
+
+      iter #   1 total cpu time :   388.3 secs   av.it.:   7.0
+      thresh= 1.000E-02 alpha_mix =  0.700 |ddv_scf|^2 =  5.017E-09
+
+      iter #   2 total cpu time :   436.2 secs   av.it.:  15.7
+      thresh= 7.083E-06 alpha_mix =  0.700 |ddv_scf|^2 =  3.289E-09
+
+      iter #   3 total cpu time :   483.0 secs   av.it.:  15.7
+      thresh= 5.735E-06 alpha_mix =  0.700 |ddv_scf|^2 =  3.147E-10
+
+      iter #   4 total cpu time :   529.0 secs   av.it.:  15.5
+      thresh= 1.774E-06 alpha_mix =  0.700 |ddv_scf|^2 =  1.083E-11
+
+      iter #   5 total cpu time :   574.1 secs   av.it.:  15.0
+      thresh= 3.291E-07 alpha_mix =  0.700 |ddv_scf|^2 =  3.030E-12
+
+      iter #   6 total cpu time :   620.0 secs   av.it.:  15.2
+      thresh= 1.741E-07 alpha_mix =  0.700 |ddv_scf|^2 =  6.353E-14
+
+      iter #   7 total cpu time :   666.8 secs   av.it.:  15.3
+      thresh= 2.520E-08 alpha_mix =  0.700 |ddv_scf|^2 =  3.259E-15
+
+     End of electric fields calculation
+
+          Dielectric constant in cartesian axis 
+
+          (       2.494955420       0.000000000       0.000000000 )
+          (       0.000000000       2.495096740      -0.000000367 )
+          (       0.000000000      -0.000000377       2.527017298 )
+
+          Effective charges (d Force / dE) in cartesian axis
+
+           atom      1   Si 
+      Ex  (        2.96748        0.00000        0.00000 )
+      Ey  (        0.00000        3.62064        0.31565 )
+      Ez  (        0.00000       -0.26966        3.41211 )
+           atom      2   Si 
+      Ex  (        2.96748        0.00000        0.00000 )
+      Ey  (        0.00000        3.62064        0.31565 )
+      Ez  (        0.00000       -0.26966        3.41212 )
+           atom      3   Si 
+      Ex  (        2.96756        0.00000        0.00000 )
+      Ey  (        0.00000        3.62078        0.31573 )
+      Ez  (        0.00000       -0.26991        3.41209 )
+           atom      4   Si 
+      Ex  (        2.96756        0.00000        0.00000 )
+      Ey  (        0.00000        3.62078        0.31573 )
+      Ez  (        0.00000       -0.26991        3.41209 )
+           atom      5   O  
+      Ex  (       -1.25557       -0.50548        0.32431 )
+      Ey  (       -0.45240       -1.94300        0.69778 )
+      Ez  (        0.26190        0.73825       -1.65794 )
+           atom      6   O  
+      Ex  (       -1.25557       -0.50548        0.32431 )
+      Ey  (       -0.45240       -1.94300        0.69778 )
+      Ez  (        0.26190        0.73825       -1.65794 )
+           atom      7   O  
+      Ex  (       -1.25558       -0.50544        0.32426 )
+      Ey  (       -0.45236       -1.94285        0.69772 )
+      Ez  (        0.26186        0.73816       -1.65795 )
+           atom      8   O  
+      Ex  (       -1.25558       -0.50544        0.32426 )
+      Ey  (       -0.45236       -1.94285        0.69772 )
+      Ez  (        0.26186        0.73816       -1.65795 )
+           atom      9   O  
+      Ex  (       -1.35622       -0.51052       -0.44211 )
+      Ey  (       -0.56357       -1.84224       -0.62974 )
+      Ez  (       -0.50834       -0.59591       -1.65795 )
+           atom     10   O  
+      Ex  (       -1.35622       -0.51052       -0.44211 )
+      Ey  (       -0.56357       -1.84224       -0.62974 )
+      Ez  (       -0.50834       -0.59591       -1.65795 )
+           atom     11   O  
+      Ex  (       -1.35624       -0.51047       -0.44208 )
+      Ey  (       -0.56352       -1.84214       -0.62965 )
+      Ez  (       -0.50834       -0.59584       -1.65794 )
+           atom     12   O  
+      Ex  (       -1.35623       -0.51047       -0.44208 )
+      Ey  (       -0.56352       -1.84214       -0.62965 )
+      Ez  (       -0.50834       -0.59584       -1.65794 )
+           atom     13   Si 
+      Ex  (        3.45755        0.28279       -0.27339 )
+      Ey  (        0.28286        3.13060       -0.15778 )
+      Ez  (        0.23364        0.13489        3.41214 )
+           atom     14   Si 
+      Ex  (        3.45755        0.28279       -0.27339 )
+      Ey  (        0.28286        3.13060       -0.15778 )
+      Ez  (        0.23364        0.13489        3.41214 )
+           atom     15   Si 
+      Ex  (        3.45755        0.28299       -0.27347 )
+      Ey  (        0.28284        3.13104       -0.15794 )
+      Ez  (        0.23356        0.13485        3.41215 )
+           atom     16   Si 
+      Ex  (        3.45755        0.28299       -0.27347 )
+      Ey  (        0.28284        3.13104       -0.15794 )
+      Ez  (        0.23356        0.13485        3.41215 )
+           atom     17   O  
+      Ex  (       -2.18574       -0.08469       -0.76639 )
+      Ey  (       -0.03163       -1.01275       -0.06803 )
+      Ez  (       -0.77024       -0.14229       -1.65794 )
+           atom     18   O  
+      Ex  (       -2.18574       -0.08469       -0.76639 )
+      Ey  (       -0.03163       -1.01275       -0.06803 )
+      Ez  (       -0.77024       -0.14229       -1.65794 )
+           atom     19   O  
+      Ex  (       -2.18570       -0.08469       -0.76636 )
+      Ey  (       -0.03162       -1.01266       -0.06805 )
+      Ez  (       -0.77020       -0.14230       -1.65793 )
+           atom     20   O  
+      Ex  (       -2.18570       -0.08469       -0.76636 )
+      Ey  (       -0.03162       -1.01266       -0.06805 )
+      Ez  (       -0.77020       -0.14230       -1.65793 )
+           atom     21   O  
+      Ex  (       -2.18574        0.08469        0.76639 )
+      Ey  (        0.03163       -1.01275       -0.06803 )
+      Ez  (        0.77024       -0.14229       -1.65794 )
+           atom     22   O  
+      Ex  (       -2.18574        0.08469        0.76639 )
+      Ey  (        0.03163       -1.01275       -0.06803 )
+      Ez  (        0.77024       -0.14229       -1.65794 )
+           atom     23   O  
+      Ex  (       -2.18570        0.08469        0.76636 )
+      Ey  (        0.03162       -1.01266       -0.06805 )
+      Ez  (        0.77020       -0.14230       -1.65793 )
+           atom     24   O  
+      Ex  (       -2.18570        0.08469        0.76636 )
+      Ey  (        0.03162       -1.01266       -0.06805 )
+      Ez  (        0.77020       -0.14230       -1.65793 )
+           atom     25   Si 
+      Ex  (        3.45755       -0.28279        0.27339 )
+      Ey  (       -0.28286        3.13060       -0.15778 )
+      Ez  (       -0.23364        0.13489        3.41214 )
+           atom     26   Si 
+      Ex  (        3.45755       -0.28279        0.27339 )
+      Ey  (       -0.28286        3.13060       -0.15778 )
+      Ez  (       -0.23364        0.13489        3.41214 )
+           atom     27   Si 
+      Ex  (        3.45755       -0.28299        0.27347 )
+      Ey  (       -0.28284        3.13104       -0.15794 )
+      Ez  (       -0.23356        0.13485        3.41215 )
+           atom     28   Si 
+      Ex  (        3.45755       -0.28299        0.27347 )
+      Ey  (       -0.28284        3.13104       -0.15794 )
+      Ez  (       -0.23356        0.13485        3.41215 )
+           atom     29   O  
+      Ex  (       -1.35622        0.51052        0.44211 )
+      Ey  (        0.56357       -1.84224       -0.62974 )
+      Ez  (        0.50834       -0.59591       -1.65795 )
+           atom     30   O  
+      Ex  (       -1.35622        0.51052        0.44211 )
+      Ey  (        0.56357       -1.84224       -0.62974 )
+      Ez  (        0.50834       -0.59591       -1.65795 )
+           atom     31   O  
+      Ex  (       -1.35624        0.51047        0.44208 )
+      Ey  (        0.56352       -1.84214       -0.62965 )
+      Ez  (        0.50834       -0.59584       -1.65794 )
+           atom     32   O  
+      Ex  (       -1.35623        0.51047        0.44208 )
+      Ey  (        0.56352       -1.84214       -0.62965 )
+      Ez  (        0.50834       -0.59584       -1.65794 )
+           atom     33   O  
+      Ex  (       -1.25557        0.50548       -0.32431 )
+      Ey  (        0.45240       -1.94300        0.69778 )
+      Ez  (       -0.26190        0.73825       -1.65794 )
+           atom     34   O  
+      Ex  (       -1.25557        0.50548       -0.32431 )
+      Ey  (        0.45240       -1.94300        0.69778 )
+      Ez  (       -0.26190        0.73825       -1.65794 )
+           atom     35   O  
+      Ex  (       -1.25558        0.50544       -0.32426 )
+      Ey  (        0.45236       -1.94285        0.69772 )
+      Ez  (       -0.26186        0.73816       -1.65795 )
+           atom     36   O  
+      Ex  (       -1.25558        0.50544       -0.32426 )
+      Ey  (        0.45236       -1.94285        0.69772 )
+      Ez  (       -0.26186        0.73816       -1.65795 )
+
+
+     Representation # 10 mode #  10
+
+     Self-consistent Calculation
+
+      iter #   1 total cpu time :  1203.3 secs   av.it.:   5.0
+      thresh= 1.000E-02 alpha_mix =  0.700 |ddv_scf|^2 =  2.408E-08
+
+      iter #   2 total cpu time :  1219.7 secs   av.it.:  14.9
+      thresh= 1.552E-05 alpha_mix =  0.700 |ddv_scf|^2 =  2.381E-08
+
+      iter #   3 total cpu time :  1235.4 secs   av.it.:  14.0
+      thresh= 1.543E-05 alpha_mix =  0.700 |ddv_scf|^2 =  4.170E-10
+
+      iter #   4 total cpu time :  1251.1 secs   av.it.:  14.5
+      thresh= 2.042E-06 alpha_mix =  0.700 |ddv_scf|^2 =  2.842E-11
+
+      iter #   5 total cpu time :  1267.1 secs   av.it.:  14.8
+      thresh= 5.331E-07 alpha_mix =  0.700 |ddv_scf|^2 =  4.011E-12
+
+      iter #   6 total cpu time :  1283.0 secs   av.it.:  14.8
+      thresh= 2.003E-07 alpha_mix =  0.700 |ddv_scf|^2 =  2.607E-13
+
+      iter #   7 total cpu time :  1298.9 secs   av.it.:  14.8
+      thresh= 5.106E-08 alpha_mix =  0.700 |ddv_scf|^2 =  3.924E-14
+
+      iter #   8 total cpu time :  1315.9 secs   av.it.:  14.5
+      thresh= 1.981E-08 alpha_mix =  0.700 |ddv_scf|^2 =  2.445E-15
+
+     End of self-consistent calculation
+
+     Convergence has been achieved 
+
+     Dynamical matrix:
+        10    1 -0.011876  0.000001
+        10    2  0.000000  0.000000
+        10    3  0.000000  0.000000
+        10    4 -0.011871 -0.000001
+        10    5  0.000000  0.000000
+        10    6  0.000000  0.000000
+        10    7 -0.041435  0.000000
+        10    8  0.000000  0.000000
+        10    9  0.000000  0.000000
+        10   10  0.923772  0.000000
+        10   11  0.000000  0.000000
+        10   12  0.000000  0.000000
+        10   13  0.002372  0.000000
+        10   14  0.020300  0.000002
+        10   15 -0.002104  0.000000
+        10   16  0.008912 -0.000001
+        10   17 -0.000496 -0.000000
+        10   18 -0.001214  0.000000
+        10   19  0.016571 -0.000001
+        10   20  0.002219  0.000000
+        10   21 -0.001902  0.000000
+        10   22 -0.226863  0.000006
+        10   23 -0.191142 -0.000004
+        10   24  0.103329 -0.000004
+        10   25  0.007931 -0.000001
+        10   26  0.001070  0.000001
+        10   27  0.001994 -0.000001
+        10   28  0.001621 -0.000000
+        10   29  0.014819 -0.000001
+        10   30 -0.003930  0.000001
+        10   31 -0.213953  0.000001
+        10   32 -0.091097 -0.000005
+        10   33 -0.189885 -0.000001
+        10   34  0.017142 -0.000000
+        10   35  0.002705 -0.000001
+        10   36  0.002917 -0.000001
+        10   37 -0.029025  0.000000
+        10   38  0.005935  0.000001
+        10   39  0.000403  0.000000
+        10   40  0.031378  0.000000
+        10   41 -0.050144 -0.000000
+        10   42  0.054002  0.000001
+        10   43 -0.017084  0.000001
+        10   44 -0.077307 -0.000002
+        10   45 -0.044989  0.000001
+        10   46 -0.030801 -0.000002
+        10   47  0.005481  0.000000
+        10   48  0.007464  0.000001
+        10   49 -0.040653 -0.000004
+        10   50 -0.010434  0.000000
+        10   51 -0.039031 -0.000003
+        10   52  0.018447  0.000002
+        10   53  0.000747  0.000002
+        10   54  0.006953  0.000003
+        10   55  0.016256 -0.000003
+        10   56  0.009641 -0.000000
+        10   57  0.009183  0.000000
+        10   58  0.007874  0.000003
+        10   59 -0.009863  0.000000
+        10   60  0.006739  0.000002
+        10   61 -0.040653 -0.000004
+        10   62  0.010434 -0.000000
+        10   63  0.039031  0.000003
+        10   64  0.018447  0.000002
+        10   65 -0.000747 -0.000002
+        10   66 -0.006953 -0.000003
+        10   67  0.016256 -0.000003
+        10   68 -0.009641  0.000000
+        10   69 -0.009183 -0.000000
+        10   70  0.007874  0.000003
+        10   71  0.009863 -0.000000
+        10   72 -0.006739 -0.000002
+        10   73 -0.029025  0.000000
+        10   74 -0.005935 -0.000001
+        10   75 -0.000403 -0.000000
+        10   76  0.031378  0.000000
+        10   77  0.050144  0.000000
+        10   78 -0.054002 -0.000001
+        10   79 -0.017084  0.000001
+        10   80  0.077307  0.000002
+        10   81  0.044989 -0.000001
+        10   82 -0.030801 -0.000002
+        10   83 -0.005481 -0.000000
+        10   84 -0.007464 -0.000001
+        10   85  0.007931 -0.000001
+        10   86 -0.001070 -0.000001
+        10   87 -0.001994  0.000001
+        10   88  0.001621 -0.000000
+        10   89 -0.014819  0.000001
+        10   90  0.003930 -0.000001
+        10   91 -0.213953  0.000001
+        10   92  0.091097  0.000005
+        10   93  0.189885  0.000001
+        10   94  0.017142 -0.000000
+        10   95 -0.002705  0.000001
+        10   96 -0.002917  0.000001
+        10   97  0.002372  0.000000
+        10   98 -0.020300 -0.000002
+        10   99  0.002104 -0.000000
+        10  100  0.008912 -0.000001
+        10  101  0.000496  0.000000
+        10  102  0.001214 -0.000000
+        10  103  0.016571 -0.000001
+        10  104 -0.002219 -0.000000
+        10  105  0.001902 -0.000000
+        10  106 -0.226863  0.000006
+        10  107  0.191142  0.000004
+        10  108 -0.103329  0.000004
+ 
+     PHONON       :      2h 2m CPU  21m59.59s WALL
+
+     INITIALIZATION: 
+     phq_setup    :      2.24s CPU      0.91s WALL (       1 calls)
+     phq_init     :   1595.69s CPU    242.65s WALL (       1 calls)
+ 
+     phq_init     :   1595.69s CPU    242.65s WALL (       1 calls)
+     set_drhoc    :      4.71s CPU      3.68s WALL (       3 calls)
+     init_vloc    :      2.86s CPU      0.72s WALL (       2 calls)
+     init_us_1    :      3.65s CPU      0.68s WALL (       2 calls)
+     newd         :      1.69s CPU      0.44s WALL (       2 calls)
+     dvanqq       :    611.01s CPU     85.08s WALL (       1 calls)
+     drho         :    961.20s CPU    140.46s WALL (       1 calls)
+     cmpt_qdipol  :      0.00s CPU      0.00s WALL (       1 calls)
+ 
+     DIELECTRIC CONSTANT AND EFFECTIVE CHARGES:
+     solve_e      :   2469.28s CPU    376.64s WALL (       1 calls)
+     dielec       :      0.58s CPU      0.10s WALL (       1 calls)
+     zstar_eu     :   2297.45s CPU    524.54s WALL (       1 calls)
+ 
+     DYNAMICAL MATRIX:
+     dynmat0      :     21.12s CPU     15.30s WALL (       1 calls)
+     phqscf       :    807.31s CPU    126.24s WALL (       1 calls)
+     dynmatrix    :      1.86s CPU      1.87s WALL (       1 calls)
+ 
+     phqscf       :    807.31s CPU    126.24s WALL (       1 calls)
+     solve_linter :    802.68s CPU    125.17s WALL (       1 calls)
+     drhodv       :      3.46s CPU      0.50s WALL (       1 calls)
+ 
+     dynmat0      :     21.12s CPU     15.30s WALL (       1 calls)
+     dynmat_us    :      6.77s CPU      2.77s WALL (       1 calls)
+     d2ionq       :      3.66s CPU      3.67s WALL (       1 calls)
+     dynmatcc     :      5.68s CPU      4.42s WALL (       1 calls)
+ 
+     dynmat_us    :      6.77s CPU      2.77s WALL (       1 calls)
+     addusdynmat  :      0.02s CPU      0.02s WALL (       1 calls)
+ 
+     phqscf       :    807.31s CPU    126.24s WALL (       1 calls)
+     solve_linter :    802.68s CPU    125.17s WALL (       1 calls)
+ 
+     solve_linter :    802.68s CPU    125.17s WALL (       1 calls)
+     dvqpsi_us    :    751.98s CPU    275.70s WALL (     218 calls)
+     ortho        :     29.13s CPU      4.80s WALL (      64 calls)
+     cgsolve      :   2550.79s CPU    385.00s WALL (      64 calls)
+     incdrhoscf   :     93.95s CPU     12.87s WALL (      64 calls)
+     addusddens   :    731.12s CPU    103.61s WALL (     116 calls)
+     vpsifft      :     20.36s CPU      2.78s WALL (      14 calls)
+     dv_of_drho   :      8.66s CPU      1.20s WALL (      32 calls)
+     mix_pot      :     11.85s CPU      2.73s WALL (      15 calls)
+     psymdvscf    :     11.29s CPU      3.06s WALL (       8 calls)
+     newdq        :    167.72s CPU     23.75s WALL (      15 calls)
+     adddvscf     :     23.41s CPU      3.40s WALL (      50 calls)
+     drhodvus     :      1.49s CPU      0.28s WALL (       1 calls)
+ 
+     dvqpsi_us    :    751.98s CPU    275.70s WALL (     218 calls)
+     dvqpsi_us_on :    495.35s CPU    240.89s WALL (     218 calls)
+ 
+     cgsolve      :   2550.79s CPU    385.00s WALL (      64 calls)
+     ch_psi       :   2523.23s CPU    380.97s WALL (    1379 calls)
+ 
+     ch_psi       :   2523.23s CPU    380.97s WALL (    1379 calls)
+     h_psi        :   1576.36s CPU    225.18s WALL (    1412 calls)
+     last         :    557.44s CPU     91.56s WALL (    1379 calls)
+ 
+     h_psi        :   1576.36s CPU    225.18s WALL (    1412 calls)
+     add_vuspsi   :    436.32s CPU     71.86s WALL (    1412 calls)
+ 
+     incdrhoscf   :     93.95s CPU     12.87s WALL (      64 calls)
+     addusdbec    :     16.22s CPU      2.59s WALL (     280 calls)
+ 
+     drhodvus     :      1.49s CPU      0.28s WALL (       1 calls)
+ 
+      General routines
+     calbec       :    434.03s CPU     70.27s WALL (    8359 calls)
+     fft          :     62.74s CPU      9.96s WALL (    3771 calls)
+     ffts         :     17.70s CPU      2.95s WALL (     605 calls)
+     fftw         :   1424.24s CPU    189.20s WALL (  286604 calls)
+     davcio       :     20.91s CPU      3.90s WALL (    2640 calls)
+     write_rec    :      5.00s CPU      1.25s WALL (      16 calls)
+ 
+ 
+     PHONON       :      2h 2m CPU  21m59.59s WALL
+
+ 
+   This run was terminated on:  14:11:46  14Oct2019            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
