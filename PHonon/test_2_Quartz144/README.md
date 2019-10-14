@@ -1,4 +1,4 @@
-#large Quartz test 
+# Large Quartz test 
 
 * 144 atoms orthorombic super-cell of quartz SiO_2. 
 
