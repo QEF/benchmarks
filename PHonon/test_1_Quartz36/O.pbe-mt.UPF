@@ -27,7 +27,6 @@
   <!-- END OF HUMAN READABLE SECTION -->
   <!--                               -->
   <PP_HEADER generated="Generated using Fritz-Haber code, data in Abinit PP tables"
-    Generation date: 
              author="Converted from Abinit tables by P. Giannozzi"
              date="Converted June 2011"
              comment="oxygen fhi98PP Trouiller-Martins, GGA Perdew/Burke/Ernzerhof (1996), l=2 loc"
