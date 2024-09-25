@@ -1,19 +1,25 @@
  &control
     calculation='scf'
     restart_mode='from_scratch',
-    pseudo_dir = './'
-    outdir='./'
+    pseudo_dir = './',
+    outdir='./out'
     prefix='cnt10por8'
+    tstress = .false.
+    tprnfor = .false.
+    disk_io ='none'
  /
  &system
     ibrav = 3, celldm(1) =132.28, nat= 1532, ntyp= 4,
-    ecutwfc = 25.0, ecutrho = 200.0
+    ecutwfc = 25.0, ecutrho = 100.0
+    occupations='smearing', smearing='gaussian', degauss=0.02
  /
  &electrons
-    diagonalization='david'
-    electron_maxstep = 2,
-    conv_thr = 1.0e-8
-    mixing_beta = 0.7
+    diagonalization='david',
+    mixing_mode='local-TF',
+    electron_maxstep=4
+    scf_must_converge=.FALSE.
+    conv_thr = 1.0d-6,
+    mixing_beta = 0.2,
  /
 ATOMIC_SPECIES
  C 12.0107  C.pbe-van_bm.UPF
